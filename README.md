@@ -36,7 +36,7 @@ When you finish uploading the code to ESP8266-01 and deploy the circuit, you can
 
 After the initial configuration you have to restart your Watchdog in order to connect to your WiFi network as a client. The Watchdog will deploy a webserver with information and more functionality at the same URL (http://nm-wd.local or the device's IP)
 <p align="center">
-  <img src="/schematic/control-page.png">
+  <img src="/screenshots/control-page.png">
 </p>
 
 <a href="https://novamostra.com/2023/01/07/network-watchdog/">Read more at novamostra.com</a>
