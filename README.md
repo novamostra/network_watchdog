@@ -29,12 +29,12 @@
 </p>
 
 ## Web Interface
-When you finish uploading the code to ESP8266-01 and deploy the circuit, you can configure the device by navigating to http://nm-wd.local or finding the IP of the device using your router's web interface.
+When you finish uploading the code to ESP8266-01 and deploy the circuit, you can configure the device by navigating to http://nm-wd.local or http://192.168.1.1
 <p align="center">
   <img src="/screenshots/ap.png">
 </p>
 
-After the initial configuration you have to restart your Watchdog in order to connect to your WiFi network as a client. The Watchdog will deploy a webserver with information and more functionality at the same URL (http://nm-wd.local or the device's IP)
+After the initial configuration you have to restart your Watchdog in order to connect to your WiFi network as a client. The Watchdog will deploy a webserver with information and more functionality at the same URL (http://nm-wd.local or the device's IP in the local network. You can find the IP of the device using your router's web interface)
 <p align="center">
   <img src="/screenshots/control-page.png">
 </p>
