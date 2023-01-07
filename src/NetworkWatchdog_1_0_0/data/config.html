@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Network WatchDog - Configuration</title>	
+    <link href="styles/pure-min.css" type="text/css" rel="stylesheet">
+    <link href="styles/custom.css" type="text/css" rel="stylesheet">
+    <link href="styles/modal.css" type="text/css" rel="stylesheet">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<!-- favicon -->
+	
+  </head>
+  <body>
+	<div class="spinner">
+		<img src="assets/spinner.svg" alt="spinner" />
+	</div>
+    <div id="main">
+		<div class="header">
+			<h1>Network WatchDog</h1>
+			<h2>novamostra</h2>			
+		</div>
+
+		<div class="content">
+			<div id="settings" class="sub-content">
+				<div class="custom-frm">
+					<form id="configuration" class="pure-form">
+					<h2 class="content-subhead">Wifi Settings</h2>
+					<p>Select SSID and enter password.<a href="#" id="btnRescan" class="pure-button scan-btn" onclick="detectNetworks();">Scan</a></p>
+					<select name="ssid" id="ssid" required>%SSID_LIST%</select><br/>
+					<label for="ssid-pass">Password: </label><input type="password" length=64 id="ssid-pass" name="pass" required><br/>
+					
+					<h2 class="content-subhead">Ping Settings</h2>
+					<p>Set the IP/URL of at least one local or Remote Device.</p>
+					<label for="pri-ping">Primary Ping Address: </label><input id="pri-ping" value="%PRIMARY_PING%" length=98 type="text" name="pri-ping" required><br/>
+					<label for="sec-ping">Secondary Ping Address: </label><input id="sec-ping" value="%SECONDARY_PING%" length=98 type="text" name="sec-ping"><br/>
+					
+					<div class="warn-wrapper">
+						<p><b>Warning:</b> After initial configuration, settings are no longer accessible. You will have to reset Network WatchDog by pressing the hardware button for 3 seconds, to set a new configuration.</p>
+					</div>
+					<button type="submit" id="btnSubmitConfig" class="pure-button pure-button-primary custom-btn">Save</button>
+					 </form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-window" class="modal">
+		<div class="modal-content">
+			<div id="modal-message" class="modal-message" ></div>
+		</div>
+	</div>
+	
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/validators.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/config.js"></script>
+  </body>
+</html>

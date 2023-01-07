@@ -1,0 +1,156 @@
+table#information-table tr td:first-child {
+  font-weight:bold;
+}
+
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+  background: rgba(255, 255, 255, 0.6);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+     margin: 0;
+     color: #333;
+     text-align: center;
+     padding: 2.5em 2em 0;
+     border-bottom: 1px solid #eee;
+ }
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 3em;
+        font-weight: 300;
+    }
+     .header h2 {
+        font-weight: 300;
+        color: #ccc;
+        padding: 0;
+        margin-top: 0;
+    }
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+
+.hidden {
+	display:none;
+}
+
+.content-cover{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-aligned{
+	width: 100%;
+	margin:0 auto;
+}
+
+.center-aligned td{
+	text-align: center;
+}
+
+.center-aligned-text{
+	text-align:center;
+}
+form, .custom-frm {
+	width: 100%;
+	clear:both;
+}
+.custom-btn {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.scan-btn {
+	float:right;
+	background-color:#1bb33f;
+	color:#fff;
+}
+.error-img{
+	max-height:110px;
+	max-width:400px;
+	width: 100%;
+}
+.error-btn{
+	background-color:#b93737;
+}
+.warning-btn{
+	background-color:#df7514;
+}
+.connectivity-btn{
+	background-color:#1bb33f;
+}
+.stretch{
+  width:100%;
+}
+
+form input, .custom-frm input, .custom-frm select, .custom-btn{
+	width: 100%;
+    box-sizing : border-box;	
+	clear: both;
+}
+#notification {
+    position: sticky;
+    top: 0;
+	width:100%;
+    background: #fde073;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden; 
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+	padding-bottom:2px;
+}
+.warn-wrapper {
+  color: #756e15;
+  background: #fffbd1;
+  border: 1px solid #87803e;
+  padding:10px;
+  margin-top:50px;
+  margin-bottom:30px;
+}
+.warn-wrapper p{
+  margin:0;
+}
+
+.highlight {
+	background-color:#333;
+}
+.notification-content span{
+	margin-left: 10px;
+	margin-right:10px;
+}
+
+@media screen and (max-width: 768px) {
+	#notification {
+		padding-top:1px;
+	}
+}

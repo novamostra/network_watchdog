@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Network WatchDog!</title>	
+    <link href="styles/pure-min.css" type="text/css" rel="stylesheet">
+    <link href="styles/custom.css" type="text/css" rel="stylesheet">
+    <link href="styles/modal.css" type="text/css" rel="stylesheet">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<!-- favicon -->
+  </head>
+  <body>
+	<div class="spinner">
+	<img src="assets/spinner.svg" alt="spinner" />
+	</div>
+	<div class="pure-g">	
+		<div class="pure-u-1">
+			<div id="main">
+				<div class="header">
+					<h1>Network WatchDog</h1>
+					<h2>novamostra</h2>				
+				</div>
+
+				
+				<div class="content">
+					<div id="information" class="sub-content">
+						<h2 class="content-subhead">Information</h2>
+						<table id="information-table" class="pure-table pure-table-horizontal stretch">
+							<tbody>
+								<tr>
+									<td>Boot Time:</td>
+									<td><span id="boot-time">%BOOT_TIME%</span></td>
+								</tr>
+								<tr>
+									<td>Uptime:</td>
+									<td><span id="uptime"></span></td>
+									
+								</tr>
+								<tr>
+									<td>Connected to:</td>
+									<td><span id="ssid">%SSID%</span></td>
+								</tr>
+								<tr>
+									<td>IP:</td>
+									<td><span id="ip">%IP%</span></td>
+									
+								</tr>
+								<tr>
+									<td>Subnet Mask:</td>
+									<td><span id="subnet-mask">%SUBNET_MASK%</span></td>
+								</tr>
+								<tr>
+									<td>Gateway:</td>
+									<td><span id="gateway">%GATEWAY%</span></td>
+									
+								</tr>
+								<tr>
+									<td>MAC Address:</td>
+									<td><span id="mac-address">%MAC%</span></td>
+								</tr>
+								<tr>
+									<td>Hostname:</td>
+									<td><span id="hostname">%HOSTNAME%</span></td>
+									
+								</tr>
+								<tr>
+									<td>RSSI:</td>
+									<td><span id="rssi">%RSSI%</span> dBm</td>
+								</tr>
+								<tr>
+									<td>Total Resets:</td>
+									<td><span id="total-resets">%RESET_COUNT%</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div id="ping-settings" class="sub-content">
+					<h2 class="content-subhead">Test Connection</h2>
+						<div class="pure-form custom-frm">					
+							<p>Test connectivity to a Local or Remote Device/Server.</p>
+							<label for="ip">IP or URL: </label><input id="ping-dst" length=64 type="text" name="con-req" required=""><br/>
+							<button id="btn-test-connection" class="pure-button pure-button-primary custom-btn connectivity-btn" onclick="testConnection();">Ping</button>	
+							<p id="result"></p>
+						</div>
+					</div>
+					<div id="device-control" class="sub-content">
+					<h2 class="content-subhead">Device Control</h2>
+						<div class="custom-frm">						
+							<p>Power cycle the connected device only. Network WatchDog will continue to operate.</p>
+								<button id="btn-restart" class="pure-button pure-button-primary custom-btn warning-btn" onclick="restartDevice();" >Restart Device</button>
+						</div>
+					</div>
+					<div id="device-settings" class="sub-content">
+					<h2 class="content-subhead">Settings</h2>
+						<div class="custom-frm">						
+							<p>For security reasons settings are not configurable. Reset Network WatchDog by pressing the hardware button for 3 seconds, to set a new configuration.</p>
+						</div>
+					</div>
+					<div id="logs"></div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+
+	<div id="modal-window" class="modal">
+		<div class="modal-content">
+			<div id="modal-message" class="modal-message" ></div>
+		</div>
+	</div>
+	
+    <script src="js/jquery.min.js"></script>	
+    <script src="js/ui.js"></script>
+    <script src="js/validators.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
