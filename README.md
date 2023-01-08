@@ -25,7 +25,7 @@
 
  ## Schematic
 <p align="center">
-  <img src="/schematic/networkWatchdog.jpg">
+  <img src="/schematic/networkWatchdog.png">
 </p>
 
 ## Web Interface
