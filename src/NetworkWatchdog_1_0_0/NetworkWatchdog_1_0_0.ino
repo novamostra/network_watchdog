@@ -447,6 +447,8 @@ String processor(const String& var){
     }
   }else if(var == "RESET_COUNT"){
     return String(reset_count);
+  }else{
+    return "";
   }
 }
 
